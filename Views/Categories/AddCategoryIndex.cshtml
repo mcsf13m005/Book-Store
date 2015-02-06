@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Book Store Template, Free CSS Template, CSS Website Layout</title>
+    <meta name="keywords" content="Book Store Template, Free CSS Template, CSS Website Layout, CSS, HTML" />
+    <meta name="description" content="Book Store Template, Free CSS Template, Download CSS Website" />
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+</head>
+@model FirstTry.Models.BookCategory
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")}
+<body>
+
+    <div id="templatemo_content_right">
+
+        <div id="templatemo_content_right">
+            <br /><br /><br /><br />
+            @using (Html.BeginForm())
+            {
+                @Html.LabelFor(m => m.CategoryId)<br /><br />
+                @Html.EditorFor(m => m.CategoryId)@Html.ValidationMessageFor(m => m.CategoryId)<br /><br />
+                
+                
+                
+                @Html.LabelFor(m => m.Writer)<br /><br />
+                @Html.EditorFor(m => m.Writer)@Html.ValidationMessageFor(m => m.Writer)<br /><br />
+                
+                
+                @Html.LabelFor(m => m.Publisher)<br />
+                @Html.EditorFor(m => m.Publisher)@Html.ValidationMessageFor(m => m.Publisher)<br /><br />
+                
+                
+                @Html.LabelFor(m => m.Price)<br /><br />
+                @Html.EditorFor(m => m.Price)@Html.ValidationMessageFor(m => m.Price)<br /><br />
+                
+                @Html.LabelFor(m => m.Edition)<br /><br />
+                @Html.EditorFor(m => m.Edition)<br /><br />
+                @Html.LabelFor(m => m.Name)
+                @Html.EditorFor(m => m.Name)@Html.ValidationMessageFor(m => m.Name)<br />
+               
+                <input type="submit" value="Add" />
+            }
+
+
+        </div>
+
+
+        <div class="cleaner_with_height">&nbsp;</div>
+    </div> <!-- end of content -->
+
+</body>
+</html>

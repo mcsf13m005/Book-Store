@@ -1,0 +1,34 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Book Store Template, Free CSS Template, CSS Website Layout</title>
+    <meta name="keywords" content="Book Store Template, Free CSS Template, CSS Website Layout, CSS, HTML" />
+    <meta name="description" content="Book Store Template, Free CSS Template, Download CSS Website" />
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+</head>
+@model FirstTry.Models.RegUser
+<body>
+
+    <div id="templatemo_content_right">
+        <br /><br />
+        <h2>
+           To Continue,Please Login as Admin.<br />
+            @{Html.BeginForm("VerifyAdmin", "Login_SignUp", FormMethod.Post);}
+            @Html.Label("Username")
+            @Html.Editor("Username")
+            <br /><br />
+
+            @Html.Label("Password")
+            @Html.Editor("Password")<br /><br />
+            <input type="submit" name="submit" value="Login" /><br />
+            @{Html.EndForm();}
+        </h2>
+
+
+
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </div>
+
+</body>
+</html>

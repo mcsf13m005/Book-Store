@@ -1,0 +1,51 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Book Store Template, Free CSS Template, CSS Website Layout</title>
+    <meta name="keywords" content="Book Store Template, Free CSS Template, CSS Website Layout, CSS, HTML" />
+    <meta name="description" content="Book Store Template, Free CSS Template, Download CSS Website" />
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+</head>
+@model FirstTry.Models.ContactU
+<body>
+    
+
+    
+            <div id="templatemo_content_right">
+                <h4>
+                    Please complete the form below to send a message to us<br />
+                    (please enter your email address if you would like a reply)
+                </h4>
+               @{Html.BeginForm("Add", "Contact", FormMethod.Post);}
+                @Html.Label("Name")
+                @Html.Editor("Name")
+                    
+                <br /><br />
+
+                 @Html.Label("Email")
+                @Html.Editor("Email")<br /><br />
+                @Html.Label("Phone")
+                @Html.Editor("Phone")<br /><br />
+                @*@Html.TextAreaFor(c=>c.Text)
+                @Html.EditorFor(c=>c.Text)*@
+                Enter your Text here:<br />
+                <textarea rows="10" cols="30" name="comment"></textarea><br /><br />
+                <input type="submit" name="submit" value="Submit" />
+                <br /><br /><br />
+                <h4>Alternatively, you can phone us on the PK International Distribution Helpline Or send Us mail as well:<br />
+
+                Telephone: +92 (0) 1285 715 127<br />
+                E-mail: mcsf13m005@pucit.edu.pk</h4>
+
+
+
+
+
+                @{Html.EndForm();}
+                <br /><br />
+                </div>
+        
+      
+    </body>
+</html>

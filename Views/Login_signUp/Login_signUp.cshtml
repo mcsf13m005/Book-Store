@@ -1,0 +1,49 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Book Store Template, Free CSS Template, CSS Website Layout</title>
+    <meta name="keywords" content="Book Store Template, Free CSS Template, CSS Website Layout, CSS, HTML" />
+    <meta name="description" content="Book Store Template, Free CSS Template, Download CSS Website" />
+    <link href="~/Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+</head>
+@model FirstTry.Models.RegUser
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")}
+<body>
+    
+            <div id="templatemo_content_right">
+                            
+                
+                
+                <h2>New customer? Please register your details to create a new account.</h2><br />
+
+                Required information *<br /><br />
+                <h3><b>Login Detials:</b></h3>
+               @{Html.BeginForm("Add", "Login_signUp", FormMethod.Post);}
+                @Html.Label("Full Name*")<br />
+                @Html.Editor("FullName")@Html.ValidationMessageFor(m => m.FullName) <br /><br />
+                @Html.Label("Username*")<br />
+                @Html.Editor("Username")@Html.ValidationMessageFor(m => m.Username)<br /><br />
+                @Html.Label("Email*")<br />
+                @Html.Editor("Email")@Html.ValidationMessageFor(m => m.Email)<br /><br />
+                Password<br />@Html.Password("Password")@Html.ValidationMessageFor(m => m.Password)<br /><br />
+                Conform Password<br />@Html.Password("Password")@Html.ValidationMessageFor(m => m.ConformPassword)<br /><br />
+               <h3><b>Card Details:</b></h3>
+                Card Type:<br />
+                <select id="DropDownList1" name="CardType">
+                    <option>Visa</option>
+                    <option>Credit</option>
+                    <option>Master Card</option>
+                </select>@Html.ValidationMessageFor(m => m.CardType)
+                @*@Html.Editor("CardType")*@<br /><br />
+                @Html.Label("Card Number*")<br />
+                @Html.Editor("CardNumber")@Html.ValidationMessageFor(m => m.CardNumber)<br /><br />
+                <input type="Submit" name="submit" value="Create Account>>" /><br />
+
+                @{Html.EndForm();}
+                <br /><br />
+            </div>
+       
+</body>
+</html>
